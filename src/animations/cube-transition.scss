@@ -21,7 +21,7 @@ $size: 10px;
 
 .cube-transition {
   position: relative;
-  transform: translate(-$amount / 2, -$amount / 2);
+  transform: translate(calc(-1 * $amount / 2), calc(-1 * $amount / 2));
 
   > div {
     @include global-animation();

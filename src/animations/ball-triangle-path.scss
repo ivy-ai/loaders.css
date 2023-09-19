@@ -5,7 +5,7 @@ $amount: 50px;
 
 @keyframes ball-triangle-path-1 {
   33% {
-    transform: translate($amount / 2, -$amount);
+    transform: translate(calc($amount / 2), -$amount);
   }
   66% {
     transform: translate($amount, 0px);
@@ -17,10 +17,10 @@ $amount: 50px;
 
 @keyframes ball-triangle-path-2 {
   33% {
-    transform: translate($amount / 2, $amount);
+    transform: translate(calc($amount / 2), $amount);
   }
   66% {
-    transform: translate(- $amount / 2, $amount);
+    transform: translate(calc(-1 * $amount / 2), $amount);
   }
   100% {
     transform: translate(0px, 0px);
@@ -32,7 +32,7 @@ $amount: 50px;
     transform: translate(-$amount, 0px);
   }
   66% {
-    transform: translate(- $amount / 2, -$amount);
+    transform: translate(calc(-1 * $amount / 2), -$amount);
   }
   100% {
     transform: translate(0px, 0px);
@@ -56,7 +56,7 @@ $amount: 50px;
 .ball-triangle-path {
   position: relative;
   @include ball-triangle-path();
-  transform: translate(-$amount / 1.667, -$amount / 1.333);
+  transform: translate(calc(-1 * $amount / 1.667), calc(-1 * $amount / 1.333));
 
   > div {
     @include global-animation();
@@ -72,7 +72,7 @@ $amount: 50px;
     }
 
     &:nth-of-type(2) {
-      left: $amount / 2;
+      left: calc($amount / 2);
     }
 
     &:nth-of-type(3) {
